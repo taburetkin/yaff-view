@@ -1,6 +1,6 @@
 
 import { View } from './_ViewConstructor.js';
-import { domApi } from "./domApi.js";
+import { domApi } from "./core.js";
 import { 
 	domElementMixin, 
 	domEventsMixin, 
@@ -15,7 +15,7 @@ import {
 } from "./mixins/index.js";
 
 import { Events } from "./Events.js";
-import { ChildrenContainer } from './ChildrenContainer.js';
+
 
 
 Object.assign(View.prototype, 

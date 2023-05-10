@@ -1,1 +1,1 @@
-export { extend, knownCtors, uniqueId, debounce } from 'yaff-core';
+export { extend, knownCtors, uniqueId, debounce, domApi } from 'yaff-core';
