@@ -3,7 +3,7 @@ import { attachView } from "../utils/attachView.js";
 import { isView } from "../utils/is-utils.js";
 import { uniqueId } from "../core.js";
 import { ChildrenContainer } from "../ChildrenContainer.js";
-import { getDefaultValueFromConfig } from "../configuration.js";
+import { getConfigurationValue } from "../configuration.js";
 
 export const childrenMixin = {
 
@@ -35,7 +35,7 @@ export const childrenMixin = {
 	},
 
 	_getChildren() {
-		const enabled = getDefaultValueFromConfig('view.render.children', this.get('childrenEnabled'));
+		const enabled = getConfigurationValue('view.render.children', this.get('childrenEnabled'));
 		if (!enabled) { return; }
 		const children = this.getChildren();
 		if (children && typeof children === 'object' && ((Array.isArray(children) && children.length) || Object.keys(children).length > 0)) {

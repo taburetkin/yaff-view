@@ -1,5 +1,4 @@
-import { getDefaultValueFromConfig } from "../configuration";
-import { debounce } from "../core";
+import { getConfigurationValue } from "../configuration";
 import { attachView } from "../utils/attachView";
 
 // const indexSymbol = Symbol('index');
@@ -72,7 +71,7 @@ export const collectionMixin = {
 	},
 
 	_getCollectionOrderedModels() {
-		const enabled = getDefaultValueFromConfig('view.render.collection', this.get('collectionEnabled'), !!this.collection);
+		const enabled = getConfigurationValue('view.render.collection', this.get('collectionEnabled'), !!this.collection);
 		if (!(this.collection && enabled)) { return; }
 
 		let models = this.collection.models;

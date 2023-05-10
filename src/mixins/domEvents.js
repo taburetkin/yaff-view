@@ -1,4 +1,4 @@
-import { getDefaultValueFromConfig } from "../configuration";
+import { getConfigurationValue } from "../configuration";
 
 const delegateEventSplitter = /^(\S+)\s*(.*)$/;
 
@@ -77,9 +77,9 @@ function buildTriggerHandler(view, triggerDef) {
   }
   const eventName = triggerDef.event;
 
-  let shouldPreventDefault = getDefaultValueFromConfig('view.triggers.preventDefault', triggerDef.preventDefault);
+  let shouldPreventDefault = getConfigurationValue('view.triggers.preventDefault', triggerDef.preventDefault);
 	
-  let shouldStopPropagation = getDefaultValueFromConfig('view.triggers.stopPropagation', triggerDef.stopPropagation);
+  let shouldStopPropagation = getConfigurationValue('view.triggers.stopPropagation', triggerDef.stopPropagation);
 
 	return function(event, ...args) {
 
