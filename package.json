@@ -1,0 +1,24 @@
+{
+  "name": "yaff-view",
+  "version": "1.0.0",
+  "description": "front-end event-driven view",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "front-end",
+    "components",
+    "view",
+    "event-driven",
+    "framework"
+  ],
+  "author": "dimtabu",
+  "license": "ISC",
+  "peerDependencies": {
+    "yaff-events": "^2.0.0"
+  },
+  "devDependencies": {
+    "yaff-events": "^2.0.0"
+  }
+}
